@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
 
-using OwinPerRequestExample.Middleware;
+using RequestLifetimeMiddleware;
 
 [assembly: OwinStartup(typeof(OwinPerRequestExample.App_Start.Startup))]
 

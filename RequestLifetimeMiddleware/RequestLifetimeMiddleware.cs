@@ -7,7 +7,7 @@ using System.Web;
 using Microsoft.Owin;
 using Microsoft.Practices.Unity;
 
-namespace OwinPerRequestExample.Middleware
+namespace RequestLifetimeMiddleware
 {
     public class RequestLifetimeMiddleware : OwinMiddleware
     {

@@ -7,7 +7,7 @@ using Microsoft.Practices.Unity;
 
 using Owin;
 
-namespace OwinPerRequestExample.Middleware
+namespace RequestLifetimeMiddleware
 {
     public static class OwinExtensions
     {

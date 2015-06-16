@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinPerRequestExample", "OwinPerRequestExample\OwinPerRequestExample.csproj", "{FBD56926-9023-41EC-A018-6AE709E46B02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestLifetimeMiddleware", "RequestLifetimeMiddleware\RequestLifetimeMiddleware.csproj", "{4FAE7E6A-1E8B-44F2-8D55-1624C683B6F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FBD56926-9023-41EC-A018-6AE709E46B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBD56926-9023-41EC-A018-6AE709E46B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBD56926-9023-41EC-A018-6AE709E46B02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FAE7E6A-1E8B-44F2-8D55-1624C683B6F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FAE7E6A-1E8B-44F2-8D55-1624C683B6F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FAE7E6A-1E8B-44F2-8D55-1624C683B6F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FAE7E6A-1E8B-44F2-8D55-1624C683B6F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
