@@ -1,0 +1,30 @@
+﻿@model IEnumerable<OwinPerRequestExample.Models.ObjectInfoModel>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>@ViewBag.Title.</h2>
+
+<table>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.TextBox("ObjectName", item.ObjectName)
+            </td>
+            <td>
+                @Html.TextBox("Hashcode", item.HashCode)
+            </td>
+            <td>
+                @Html.TextBox("Undisposed", item.Undisposed)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    The line "app.UseUnityMiddleware(UnityConfig.GetConfiguredContainer());" registers my middleware, which cleans up after Unity's PerRequestLifetimeManager.
+    This is basically what "DynamicModuleUtility.RegisterModule(typeof(UnityPerRequestHttpModule));" used to do.
+    Comment it out to see the garbage pile up.
+</div>
