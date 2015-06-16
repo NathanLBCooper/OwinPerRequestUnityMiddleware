@@ -14,6 +14,7 @@ namespace OwinPerRequestExample.Controllers
     public class HomeController : Controller
     {
         private List<ObjectInfoModel> model;
+        private ISameInRequestDisposible[] disposibles;
 
         public HomeController(
             IAlwaysTheSame same,
@@ -27,6 +28,7 @@ namespace OwinPerRequestExample.Controllers
             var objects = new object[] { same, req0, req1, diff0, diff1, reqDis0, reqDis1 };
 
             this.model = objects.Select(x => new ObjectInfoModel { HashCode = x.GetHashCode().ToString(), ObjectName = x.GetType().Name, Object = x}).ToList();
+            this.disposibles = new [] { reqDis0, reqDis1};
 
         }
 
@@ -38,6 +40,8 @@ namespace OwinPerRequestExample.Controllers
                                         x.Undisposed = refable.NumberOfUndisposed;
                                     } });
 
+            
+            this.disposibles.ForEach( x => x.CheckObjectIsNotDisposedWhenWeNeedIt());
 
             return View(this.model);
         }

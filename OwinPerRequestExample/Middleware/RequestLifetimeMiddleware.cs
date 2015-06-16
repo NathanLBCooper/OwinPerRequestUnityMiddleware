@@ -21,6 +21,9 @@ namespace OwinPerRequestExample.Middleware
 
         public override async Task Invoke(IOwinContext context)
         {
+            // Wait for request
+            await base.Next.Invoke(context);
+
             // Identify child controlled types
             var registrations = unityContainer.Registrations.Where(x => x.LifetimeManager is PerRequestLifetimeManager);
 
@@ -33,8 +36,6 @@ namespace OwinPerRequestExample.Middleware
                     instance.Dispose();
                 }
             }
-
-            await base.Next.Invoke(context);
         }
     }
 }

@@ -34,7 +34,7 @@ namespace OwinPerRequestExample.Objects
 
     public interface ISameInRequestDisposible : IDisposable, IReferenceCounting
     {
-
+        void CheckObjectIsNotDisposedWhenWeNeedIt();
     }
 
     public class SameInRequestDisposible : ISameInRequestDisposible
@@ -65,6 +65,12 @@ namespace OwinPerRequestExample.Objects
             {
                 return Undisposed;
             }
+        }
+
+        public void CheckObjectIsNotDisposedWhenWeNeedIt()
+        {
+            if (!disposed) return;
+            throw new ObjectDisposedException("disposed too early");
         }
     }
 
