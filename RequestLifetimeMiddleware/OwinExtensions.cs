@@ -11,9 +11,9 @@ namespace RequestLifetimeMiddleware
 {
     public static class OwinExtensions
     {
-        private const string MiddlewareRegistrationKey = "Unity:MiddlewareRegistered";
+        private const string MiddlewareRegistrationKey = "RequestLifetime:MiddlewareRegistered";
 
-        public static IAppBuilder UseUnityMiddleware(this IAppBuilder app, IUnityContainer container)
+        public static IAppBuilder UseRequestLifetimeMiddleware(this IAppBuilder app, IUnityContainer container)
         {
             if (app == null) throw new ArgumentNullException("app");
             if (app.Properties.ContainsKey(MiddlewareRegistrationKey)) return app;

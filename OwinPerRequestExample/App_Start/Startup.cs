@@ -13,7 +13,7 @@ namespace OwinPerRequestExample.App_Start
     {
         public void Configuration(IAppBuilder app)
         {
-            app.UseUnityMiddleware(UnityConfig.GetConfiguredContainer());
+            app.UseRequestLifetimeMiddleware(UnityConfig.GetConfiguredContainer());
         }
     }
 }
