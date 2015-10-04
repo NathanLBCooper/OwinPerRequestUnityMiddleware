@@ -197,7 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RequestLifetimeMiddleware\RequestLifetimeMiddleware.csproj">
-      <Project>{4fae7e6a-1e8b-44f2-8d55-1624c683b6f3}</Project>
+      <Project>{6ea7e8ed-f12b-4947-bdc6-3f3aa50385d5}</Project>
       <Name>RequestLifetimeMiddleware</Name>
     </ProjectReference>
   </ItemGroup>
