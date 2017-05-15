@@ -1,4 +1,7 @@
 # OwinPerRequestUnityMiddleware
+
+THIS IS BROKEN DON'T USE THIS
+
 Example of owin middleware that "fixes" Unity's PerRequestLifetimeManager object disposal problem
 
 When you use Unity as your dependency injection container, you have a problem when you start to use Owin. The UnityPerRequestHttpModule cannot be used, which means you have to remove the line `DynamicModuleUtility.RegisterModule(typeof(UnityPerRequestHttpModule));`. This is fine, you're website continues to work and you continue to get one instance per request. However, your objects aren't getting disposed now (which can be pretty serious depending on your objects). He're some middleware that fills that gap.
